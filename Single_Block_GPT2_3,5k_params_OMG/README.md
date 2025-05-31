@@ -1,6 +1,6 @@
 # Single Block GPT-2 OMG (Minimized Parameters)
 
-This project explores minimizing the parameter count of a custom GPT-2-like language model while maintaining accurate training results. A key achievement in this project is successfully reducing the model size to **3,492 parameters** while still being able to train the model to accurately reproduce the training data.
+This project explores minimizing the parameter count of a custom GPT-2-like language model while maintaining accurate training results. A key achievement in this project is successfully reducing the model size to **3,492 parameters** while still being able to train the model to accurately reproduce the only one point training dataset.
 
 Đánh dấu một bước ngoặt trong quá trình nghiên cứu về việc tối ưu hóa kích thước mô hình GPT-2 để giảm thiểu số lượng tham số mà vẫn đảm bảo hiệu suất tốt trong việc học từ ngữ, đây là Lần đầu tiên chinh phục được transformers model size nhỏ nhất là 3,492 params và đạt độ chính xác cao trên tập dữ liệu huấn luyện ^^
 
