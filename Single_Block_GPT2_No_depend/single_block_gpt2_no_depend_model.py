@@ -16,7 +16,7 @@ class GPT2Config:
 
         if model_type == "small":
             self.n_positions = 1024
-            self.n_embd = 1020 # Changed from 1024 to be divisible by n_head (12)
+            self.n_embd = 768 # 1020 | Changed from 768 to be divisible by n_head (12)
             self.n_layer = 12 # Standard GPT-2 small has 12 layers, but we only use 1
             self.n_head = 12
             self.embd_pdrop = 0.1
