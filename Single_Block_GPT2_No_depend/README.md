@@ -6,6 +6,8 @@ This project provides a minimal implementation of a GPT-2-like language model wi
 
 Chúng tôi đã phát hiện ra rằng việc huấn luyện mô hình trong các giai đoạn riêng biệt với khởi tạo lại của mô hình, bộ tối ưu hóa và mã hóa ký tự ở đầu mỗi giai đoạn, sau đó chỉ tải trạng thái của mô hình được lưu trữ là một cách hiệu quả để đạt được sự trùng khớp chính xác của dữ liệu huấn luyện này. Mô hình được cài đặt cho hai giai đoạn với 30 epoch mỗi giai đoạn, điều này đã được chứng minh là cấu hình thành công.
 
+Mình phát hiện ra một điểm rất thú vị là chạy quá trình training model 2 lần với 30 epoch mỗi lần thì cho ra kết quả chính xác, còn nếu chạy training 1 lần với 300 epoch, thậm chí là 3000 epoch thì kết quả output vẫn không chính xác ?! ... đố bác nào biết lý do vì sao có hiện tượng này nhé ^^
+
 ## Project Structure
 
 - `single_block_gpt2_no_depend_model.py`: Defines the model architecture, including the `GPT2Config`, `SelfAttention`, `MLP`, `TransformerBlock`, and the main `SingleBlockGPT2ModelNoDepend` class.
