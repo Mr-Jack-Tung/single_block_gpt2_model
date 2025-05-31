@@ -18,7 +18,7 @@ class GPT2Config:
             self.n_positions = 64 # Changed from 1024
             self.n_embd = 48 # Changed from 768 to be divisible by n_head (12)
             self.n_layer = 1 # Standard GPT-2 small has 12 layers, but we only use 1
-            self.n_head = 2 # Standard GPT-2 small has 12 heads, but we reduce it to 2 for demonstration purposes
+            self.n_head = 1 # Standard GPT-2 small has 12 heads, but we reduce it to 2 for demonstration purposes
             self.embd_pdrop = 0.1
             self.attn_pdrop = 0.1
             self.resid_pdrop = 0.1
