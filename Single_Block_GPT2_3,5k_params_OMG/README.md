@@ -4,6 +4,32 @@ This project explores minimizing the parameter count of a custom GPT-2-like lang
 
 Đánh dấu một bước ngoặt trong quá trình nghiên cứu về việc tối ưu hóa kích thước mô hình GPT-2 để giảm thiểu số lượng tham số mà vẫn đảm bảo hiệu suất tốt trong việc học từ ngữ, đây là Lần đầu tiên chinh phục được transformers model size nhỏ nhất là 3,492 params và đạt độ chính xác cao trên tập dữ liệu huấn luyện ^^
 
+```
+SingleBlockGPT2ModelNoDepend(
+  (wte): Embedding(34, 12)
+  (wpe): Embedding(64, 12)
+  (drop): Dropout(p=0.1, inplace=False)
+  (h): TransformerBlock(
+    (ln_1): LayerNorm((12,), eps=1e-05, elementwise_affine=True)
+    (attn): SelfAttention(
+      (c_attn): Linear(in_features=12, out_features=36, bias=True)
+      (c_proj): Linear(in_features=12, out_features=12, bias=True)
+      (attn_dropout): Dropout(p=0.1, inplace=False)
+      (resid_dropout): Dropout(p=0.1, inplace=False)
+    )
+    (ln_2): LayerNorm((12,), eps=1e-05, elementwise_affine=True)
+    (mlp): MLP(
+      (c_fc): Linear(in_features=12, out_features=48, bias=True)
+      (c_proj): Linear(in_features=48, out_features=12, bias=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (ln_f): LayerNorm((12,), eps=1e-05, elementwise_affine=True)
+  (lm_head): Linear(in_features=12, out_features=34, bias=False)
+)
+Number of trainable params: 3,492
+```
+
 ## Project Structure
 
 -   `single_block_gpt2_35k_params_model.py`: Defines the model architecture, including the `GPT2Config`, `SelfAttention`, `MLP`, `TransformerBlock`, and the main `SingleBlockGPT2ModelNoDepend` class.
